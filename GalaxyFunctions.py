@@ -1,15 +1,12 @@
 import numpy as np
 
 def galaxy_match(galaxy_calc, galaxy_truth):
-    print(galaxy_calc)
-    print(galaxy_truth)
     condlist = [np.logical_and(galaxy_calc==1, galaxy_truth==1),
             np.logical_and(galaxy_calc==1, galaxy_truth!=1),
             np.logical_and(galaxy_calc==0, galaxy_truth==1),
             np.logical_and(galaxy_calc==0, galaxy_truth!=1)]
     choicelist = ['true positive','false positive','false negative','true negative']
     matched_array=np.select(condlist, choicelist, np.NaN)
-    print(matched_array)
     return matched_array
 
 def confusion_matrix(matched_array, style='percents'):
