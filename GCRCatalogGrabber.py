@@ -1,5 +1,5 @@
 """
-Function from Irene. Description:
+Function from Irene Moskowitz. Description:
 Here’s the code I use to get stuff from GCRCatalogs. The first bit (above #ADD grabbing of truth info) gets stuff from the DC2 catalog you’re using. The next bit does the truth matching, and pulls out the truth quantities you want for comparison. The end just does some various cleaning of non-detections that are probably not of interest to you.
 """
 
